@@ -1,0 +1,102 @@
+
+
+/* Espaciado para que no tape el contenido */
+main {
+    flex: 1; 
+    margin-top: 90px;
+    padding: 20px;
+    
+}
+
+
+
+#articulo{
+    display: flex;             /* pone imagen y texto en fila */
+    align-items: flex-start;       /* centra verticalmente */
+    gap: 30px;                 /* espacio entre imagen y texto */
+    padding: 20px;
+    background-color: #1e1e2f;
+    border-radius: 10px; 
+}
+
+.articuloTorta{
+    width: 300px;              /* ancho de la imagen */
+    height: auto;              /* mantiene proporciOn */
+    border-radius: 10px;       /* bordes redondeados opcional */
+}
+
+.texto-articulo h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+.texto-articulo p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+
+
+/**/
+#productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 20px; /* espacio entre productos */
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.producto {
+    background: #2a2a3d;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* ajusta bien la imagen al contenedor */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.producto p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #ddd;
+}
+
+#registro{
+    display: flex;
+    justify-content: flex-end;   /* manda todo a la derecha */
+    align-items: center;
+    gap: 5px;                   /* espacio entre enlaces y la barra | */
+    margin-bottom: 5px;         /* espacio debajo, antes del artículo */
+    padding: 1px 1px;
+}
+
+#registro a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#registro a:hover {
+    color: #2a2a3d; /* efecto hover */
+}
+
+#registro h1 {
+    color: #050505; /* color de la barra | */
+    font-weight: bold;
+}
+
+

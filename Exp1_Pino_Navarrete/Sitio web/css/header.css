@@ -1,0 +1,79 @@
+* {
+    margin: 0x;/*margen entre el borde de la pagina y la caja de texto*/
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    flex-direction: column;
+    display: flex;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff
+}
+
+header {
+    position: fixed;/*Hace que la barra de navegacion se quede arriba incluso si se scrollea hacia abajo*/
+    top: 0;/*posiciona la barra arriba*/
+    left: 0;/*posiciona la barra a la izquierda*/
+    width: 100%;/*hace que la barra ocupe todo el ancho de la ventana*/
+    background: #1e1e2f;/*color de fondo de la barra*/
+    color: #fff;/*color de texto por defecto en la barra*/
+    display: flex;/*Convierte el header en un contenedor flexible*/
+    justify-content: space-between ;/*coloca un elemento a la izquierda y el otro a la derecha (con espacio entre ellos)*/
+    align-items: center;/*Centra verticalmente los elementos dentro del header.*/
+    padding: 15px 30px;/*hace que el texto no este pegado a los bordes*/
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);/*sombra leve bajo la barra*/
+    z-index: 1000;/*Hace que el header quede por encima de otros elementos (por ejemplo, que no se tape con imágenes o texto).*/
+}
+.izquierda {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* espacio entre logo y menú */
+}
+
+/* Logo o título */
+header h1 {
+    font-size: 1.5rem;
+}
+
+
+/* Navegación */
+nav ul {
+    list-style: none;/*Elimina el estilo de los puntos de la liste*/
+    display: flex;/*coloca las opciones de la lista una al lado de la otra*/
+    gap: 30px;/*agrega el espacio entre las opciones de la lista*/
+}
+
+nav ul li a {
+    text-decoration: none;/*elimina la linea subtitulo del link*/
+    color: #fff;/*color del texto*/
+    font-weight: bold;/*fuente del texto*/
+    transition: color 0.3s;/*tiempo de demora de aparicion del color entre que el cursor se pone sobre el texto*/
+}
+
+nav ul li a:hover {/*aqui se hace el cambio de color al poner el cursor sobre el texto*/
+    color: #4cafef;
+}
+
+.logo {
+    height: 70px;   /* ajusta el alto del logo */
+    width: auto;    /* mantiene la proporción de la imagen */
+    display: block; /* evita que tenga espacio raro alrededor */
+}
+
+footer{
+    background:#1e1e2f ;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
