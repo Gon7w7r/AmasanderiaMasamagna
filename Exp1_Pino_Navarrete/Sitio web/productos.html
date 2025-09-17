@@ -15,21 +15,41 @@
     <a href="index.html">
         <img src="img/logo.jpg" alt="Main Logo" class="logo">
     </a>
+
+
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="productos.html">Productos</a></li>
-        <li><a href="#">Acerca</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
     </div>
 
-    <a href="#" class="carrito"><img src="img/shoppingcart.png" alt="Carrito Logo" class="logo"></a>
+    <div class="carrito-container">
+    <a href="#" id="btn-carrito">
+      <img src="img/shoppingcart.png" alt="Carrito Logo" class="logo">
+    </a>
+
+    <!-- Contenido oculto -->
+    <div id="carrito" class="carrito oculto">
+      <h2>Carrito</h2>
+      <ul id="lista-carrito"></ul>
+      <p><strong>Total: $<span id="total">0</span></strong></p>
+      <button onclick="vaciarCarrito()">Vaciar carrito</button>
+      <a href="carrito.html">Ver carrito</a>
+    </div>
+    </div>
 
   </header>
 
   <main>
+
+    <div id="registro">
+      <a href="login.html">Iniciar sesion</a>
+      <h1>|</h1>
+      <a href="registro.html">Registrarse</a>
+    </div>
     <div class="titulo">
       <h1 id="titulo-productos">PRODUCTOS</h1>
     </div>  
@@ -38,14 +58,16 @@
             <a href="#"><img src="img/torta1.jpg" alt="Torta de frutilla"></a>
             <h3>Torta de Frutilla</h3>
             <p>Bizcocho suave con crema y frutillas frescas.</p>
-            <h3>$45000</h3>
+            <h3>$30000</h3>
+            <button onclick="agregarCarrito('Torta de Frutilla', 30000,'img/torta1.jpg')">Agregar al Carrito</button>
         </div>
 
         <div class="producto">
             <a href="#"><img src="img/torta2.png" alt="Torta de vainilla"></a>
             <h3>Torta de Vainilla</h3>
             <p>Clásica torta de vainilla con betún de mantequilla.</p>
-            <h3>$45000</h3>
+            <h3>$55000</h3>
+            <button onclick="agregarCarrito('Torta de Vainilla', 55000,'img/torta2.png')">Agregar al Carrito</button>
         </div>
 
         <div class="producto">
@@ -53,6 +75,7 @@
             <h3>Torta de Moka</h3>
             <p>Torta húmeda con café y relleno de crema moka.</p>
             <h3>$45000</h3>
+            <button onclick="agregarCarrito('Torta de Moka', 45000,'img/torta3.jpg')">Agregar al Carrito</button>
         </div>
 
         <div class="producto">
@@ -60,43 +83,48 @@
             <h3>Pie de Limón</h3>
             <p>Pie de limon con merengue.</p>
             <h3>$45000</h3>
+            <button onclick="agregarCarrito('Pie De Limon', 45000,'img/torta4.jpg')">Agregar al Carrito</button>
         </div>
     </div>
 
-    <div id="productos">
+    <div id="productos2">
         <div class="producto">
-            <a href="#"><img src="img/torta1.jpg" alt="Torta de frutilla"></a>
-            <h3>Torta de Frutilla</h3>
-            <p>Bizcocho suave con crema y frutillas frescas.</p>
-            <h3>$45000</h3>
+            <a href="#"><img src="img/torta5.jpg" alt="Torta de Naranja"></a>
+            <h3>Torta de Panqueque de naranja</h3>
+            <p>Torta de panqueque con fresco sabor a naranja.</p>
+            <h3>$65000</h3>
+            <button onclick="agregarCarrito('Torta de Panqueque de naranja', 45000,'img/torta.jpg')">Agregar al Carrito</button>
         </div>
 
         <div class="producto">
-            <a href="#"><img src="img/torta2.png" alt="Torta de vainilla"></a>
-            <h3>Torta de Vainilla</h3>
-            <p>Clásica torta de vainilla con betún de mantequilla.</p>
+            <a href="#"><img src="img/torta6.jpg" alt="Torta de Maracuya"></a>
+            <h3>Torta de Maracuya</h3>
+            <p>Tradicional torta de bizcochuelo blanco, rellena de crema chantilly con maracuyá.</p>
             <h3>$45000</h3>
+            <button onclick="agregarCarrito('Torta de Maracuya', 45000,'img/torta6.jpg')">Agregar al Carrito</button>
         </div>
 
         <div class="producto">
-            <a href="#"><img src="img/torta3.jpg" alt="Torta de moka"></a>
-            <h3>Torta de Moka</h3>
-            <p>Torta húmeda con café y relleno de crema moka.</p>
-            <h3>$45000</h3>
+            <a href="#"><img src="img/torta7.jpg" alt="Torta de Yogurt"></a>
+            <h3>Torta de Yogurt</h3>
+            <p>Bizcochuelo de chocolate artesanal, cubierto con una suave y cremosa mezcla de yogurt y frambuesas.</p>
+            <h3>$35000</h3>
+            <button onclick="agregarCarrito('Torta de Yogurt', 35000,'img/torta7.jpg')">Agregar al Carrito</button>
         </div>
 
         <div class="producto">
-            <a href="#"><img src="img/torta4.jpg" alt="Pie de limón"></a>
-            <h3>Pie de Limón</h3>
-            <p>Pie de limon con merengue.</p>
-            <h3>$45000</h3>
+            <a href="#"><img src="img/torta8.jpg" alt="Torta Selva Negra"></a>
+            <h3>Torta Selva Negra</h3>
+            <p>Torta de bizcocho de chocolate rellena con crema y cerezas, y dulce de guinda.</p>
+            <h3>$40000</h3>
+            <button onclick="agregarCarrito('Torta Selva Negra', 40000,'img/torta8.jpg')">Agregar al Carrito</button>
         </div>
+    </div>
 
   </main>
 
-
-
   <footer>© 2025 Mi Sitio. Todos los derechos reservados.</footer>
+  <script src="js/carrito.js"></script>
     
 </body>
 </html>

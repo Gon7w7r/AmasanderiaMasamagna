@@ -15,7 +15,7 @@ main {
     display: flex;
     justify-content: center; /* centra horizontalmente */
     align-items: center;     /* centra verticalmente */
-    padding: 20px;
+    padding: 100px;
     flex-direction: column;
 }
 
@@ -65,5 +65,32 @@ main {
 .contenedor-boton {
     display: flex;
     justify-content: flex-end; /* manda el botón a la derecha */
+}
+
+/* Contenedor de región y comuna */
+.region {
+    display: flex;
+    flex-direction: column; /* apila los elementos verticalmente */
+    gap: 10px;              /* espacio entre label y select */
+    width: 100%;            /* ocupa todo el ancho del formulario */
+}
+
+.region select {
+    width: 100%;            /* ocupa todo el ancho del formulario */
+    box-sizing: border-box; /* padding incluido en el ancho */
+    padding: 5px;          /* igual que los otros inputs */
+}
+
+.comuna {
+    display: flex;
+    flex-direction: column; /* apila los elementos verticalmente */
+    gap: 10px;              /* espacio entre label y select */
+    width: 100%;            /* ocupa todo el ancho del formulario */
+}
+
+.comuna select {
+    width: 100%;            /* ocupa todo el ancho del formulario */
+    box-sizing: border-box; /* padding incluido en el ancho */
+    padding: 5px;          /* igual que los otros inputs */
 }
 
