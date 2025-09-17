@@ -4,8 +4,7 @@
 main {
     flex: 1; 
     margin-top: 90px;
-    padding: 20px;
-    
+    padding: 20px;  
 }
 
 
@@ -91,7 +90,7 @@ main {
 }
 
 #registro a:hover {
-    color: #2a2a3d; /* efecto hover */
+    color: #6c6ccc; /* efecto hover */
 }
 
 #registro h1 {
@@ -99,4 +98,10 @@ main {
     font-weight: bold;
 }
 
+#titulo-productos{
+    font-weight: bold;
+    color: #050505;
+    text-align: center; /* centra el texto dentro de su contenedor */
+}
+    
 

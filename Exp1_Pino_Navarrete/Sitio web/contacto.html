@@ -9,11 +9,10 @@
 </head>
 <body>
     <header>
-
         <div class="izquierda">
-                <a href="index.html">
-                    <img src="img/logo.jpg" alt="Main Logo" class="logo">
-                </a>
+            <a href="index.html">
+            <img src="img/logo.jpg" alt="Main Logo" class="logo">
+            </a>
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -24,31 +23,32 @@
             </nav>
         </div>
 
-    <a href="#" class="carrito"><img src="img/shoppingcart.png" alt="Carrito Logo" class="logo"></a>
-
+        <a href="#" class="carrito"><img src="img/shoppingcart.png" alt="Carrito Logo" class="logo"></a>
     </header>
 
     <main>
         <img src="img/logo.jpg" alt="Main Logo" class="imagen-centro">
         <div id="form-registro">
-            <h2>Iniciar sesion</h2>
+            <h2>Contactanos</h2>
             <form action="#" method="post">
+
+                <label for="nombre">Nombre completo:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
                 <!-- Correo -->
                 <label for="correo">Correo electrónico:</label><br>
                 <input type="email" id="correo" name="correo" required><br><br>
-
-                <!-- Contraseña -->
-                <label for="clave">Contraseña:</label><br>
-                <input type="password" id="clave" name="clave" required><br><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" class="caja-texto"></textarea>
 
                 <!-- Botón enviar -->
-                <div id="posicion">
-                    <button type="submit">Iniciar sesion</button>
-                    <a href="registro.html">Registrarse</a>
+                <div class="contenedor-boton">
+                    <button type="submit" id="enviar-contacto">Enviar</button>
                 </div>
+                
             </form>
-        </div> 
-    </main> 
+        </div>
+    </main>
+
 
     <footer>© 2025 Mi Sitio. Todos los derechos reservados.</footer>
     
