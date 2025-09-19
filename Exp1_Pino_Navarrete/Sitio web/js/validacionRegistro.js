@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registroForm");
   const mensajeError = document.getElementById("mensajeError");
 
+  console.log("DOM cargado: formulario de registro listo para validación");
+
   const regionesComunas = {
       "Arica y Parinacota": ["Arica", "Camarones", "Putre", "General Lagos"],
       "Tarapacá": ["Iquique", "Alto Hospicio", "Pozo Almonte", "Camiña", "Colchane", "Huara", "Pica"],
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       option.textContent = region;
       selectRegion.appendChild(option);
   }
+  console.log("Select de regiones inicializado");
 
   // Cuando cambie la región, actualizar comunas
   selectRegion.addEventListener("change", function() {
@@ -42,11 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
           option.textContent = comuna;
           selectComuna.appendChild(option);
       });
+      console.log("Comunas actualizadas para la región:", this.value, comunas);
   });
 
   // Validación del formulario
   form.addEventListener("submit", function(event) {
       event.preventDefault();
+      console.log("Formulario de registro enviado, iniciando validación...");
 
       let rut= document.getElementById('rut').value.trim();
       let nombre = document.getElementById("nombre").value.trim();
@@ -56,60 +61,74 @@ document.addEventListener("DOMContentLoaded", () => {
       let clave = document.getElementById("clave").value;
       let clave2 = document.getElementById("clave2").value;
 
+      console.log("Valores ingresados:", { rut, nombre, apellido, correo, direccion, clave, clave2, region: selectRegion.value, comuna: selectComuna.value });
+
       mensajeError.textContent = "";
 
       if (rut.length < 7 || rut.length > 9) {
          mensajeError.textContent = "El rut debe tener más de 7 caracteres y menos de 10 caracteres"; 
-         return; } 
+         console.log("Error de validación: rut incorrecto");
+         return; 
+      } 
       const contienePuntosOGuiones = /[.-]/.test(rut); 
       if (contienePuntosOGuiones) { 
         mensajeError.textContent = "El rut no debe contener puntos ni guion"; 
-        return; }
+        console.log("Error de validación: rut contiene puntos o guion");
+        return; 
+      }
 
       if(nombre.length > 50) {
           mensajeError.textContent = "El nombre debe tener 50 o menos caracteres.";
+          console.log("Error de validación: nombre demasiado largo");
           return;
       }
 
       if(apellido.length > 100) {
           mensajeError.textContent = "Los apellidos deben tener menos de 100 caracteres.";
+          console.log("Error de validación: apellido demasiado largo");
           return;
       }
 
       let regexCorreo = /^[^\s@]+@(gmail\.com|duoc\.cl|profesorduoc\.cl)$/;
       if(!regexCorreo.test(correo) || correo.length > 100) {
           mensajeError.textContent = "El correo debe tener un máximo de 100 caracteres o un formato válido [gmail.com|duoc.cl|profesorduoc.cl].";
+          console.log("Error de validación: correo inválido");
           return;
       }
 
       //validacion region
-
       if(selectRegion.value === "") {
         mensajeError.textContent = "Por favor, selecciona una región.";
+        console.log("Error de validación: región no seleccionada");
         return;
       }
 
       // Validación de comuna
       if(selectComuna.value === "") {
         mensajeError.textContent = "Por favor, selecciona una comuna.";
+        console.log("Error de validación: comuna no seleccionada");
         return;
       }
 
       if(direccion.length > 300) {
           mensajeError.textContent = "La dirección debe contener 300 o menos caracteres.";
+          console.log("Error de validación: dirección demasiado larga");
           return;
       }
 
       if(clave.length < 4 || clave.length > 10) {
           mensajeError.textContent = "La contraseña debe tener al menos 4 caracteres y 10 o menos caracteres.";
+          console.log("Error de validación: contraseña fuera de rango");
           return;
       }
 
-      if(clave !== clave2) {
+      if(clave !== clave2){
           mensajeError.textContent = "Las contraseñas no coinciden.";
+          console.log("Error de validación: contraseñas no coinciden");
           return;
       }
 
+      console.log("Validación exitosa, registro permitido");
       alert("Registro exitoso 🎉");
       this.submit();
   });

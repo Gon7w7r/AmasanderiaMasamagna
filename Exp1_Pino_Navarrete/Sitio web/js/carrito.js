@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   mostrarCarrito();
   mostrarResumenCarrito();
+  console.log("DOM cargado: Carrito y resumen inicializados");
 
   // Mostrar/ocultar carrito al hacer clic en el ícono
   const btnCarrito = document.getElementById("btn-carrito");
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const carritoDiv = document.getElementById("carrito");
       if (carritoDiv) {
         carritoDiv.classList.toggle("oculto");
+        console.log("Carrito mostrado/ocultado");
       }
     });
   }
@@ -18,22 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Funciones de carrito
 function obtenerCarrito() {
-  return JSON.parse(localStorage.getItem("carrito")) || [];
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  console.log("Carrito obtenido:", carrito);
+  return carrito;
 }
 
 function guardarCarrito(carrito) {
   localStorage.setItem("carrito", JSON.stringify(carrito));
+  console.log("Carrito guardado:", carrito);
 }
 
 // Función para agregar productos al carrito
 function agregarCarrito(nombre, precio, imagen) {
   let carrito = obtenerCarrito();
-  // Revisar si el producto ya existe
   let producto = carrito.find(p => p.nombre === nombre);
   if (producto) {
     producto.cantidad++;
+    console.log(`Incrementado: ${nombre}, nueva cantidad: ${producto.cantidad}`);
   } else {
     carrito.push({ nombre, precio, imagen, cantidad: 1 });
+    console.log(`Agregado al carrito: ${nombre}`);
   }
   guardarCarrito(carrito);
   mostrarCarrito();
@@ -61,8 +67,9 @@ function mostrarCarrito() {
   if (totalSpan) {
     totalSpan.textContent = total;
   }
-}
 
+  console.log("Carrito mostrado en pantalla. Total:", total);
+}
 
 function mostrarResumenCarrito() {
   let carrito = obtenerCarrito();
@@ -100,12 +107,16 @@ function mostrarResumenCarrito() {
 
   const totalResumenSpan = document.getElementById("total-resumen");
   if (totalResumenSpan) totalResumenSpan.textContent = totalResumen;
+
+  console.log("Resumen del carrito actualizado. Total resumen:", totalResumen);
 }
 
 // Función para vaciar todo el carrito
 function vaciarCarrito() {
   localStorage.removeItem("carrito");
+  console.log("Carrito vaciado");
   mostrarCarrito();
+  mostrarResumenCarrito();
 }
 
 function modificarCantidad(index, cambio) {
@@ -116,16 +127,16 @@ function modificarCantidad(index, cambio) {
 
   // Si la cantidad baja a 0, eliminar el producto
   if (carrito[index].cantidad <= 0) {
+    console.log(`Eliminado del carrito: ${carrito[index].nombre}`);
     carrito.splice(index, 1);
+  } else {
+    console.log(`Cantidad modificada: ${carrito[index].nombre}, nueva cantidad: ${carrito[index].cantidad}`);
   }
 
   guardarCarrito(carrito);
   mostrarCarrito();          // Actualiza el carrito desplegable
   mostrarResumenCarrito();   // Actualiza el resumen
 }
-
-
-
 
 // Exponer funciones al scope global para que los botones onclick las encuentren
 window.agregarCarrito = agregarCarrito;
