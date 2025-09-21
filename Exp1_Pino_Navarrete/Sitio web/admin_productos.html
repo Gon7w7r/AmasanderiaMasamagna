@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="css/admin_header.css">
+    <link rel="stylesheet" href="css/botones.css">
+</head>
+<body>
+    <div class="admin-contenedor">
+        <div class="barra">
+            <div class="admin-logo">
+                <h2>Panel de Administración</h2>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="admin_index.html">
+                        <i class="icono">🏠</i>
+                        <span>Panel Principal</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="admin_productos.html">
+                        <i class="icono">📦</i>
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="usuarios.html">
+                        <i class="icono">👥</i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pedidos.html">
+                        <i class="icono">📋</i>
+                        <span>Pedidos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="configuracion.html">
+                        <i class="icono">⚙️</i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin_login.html">
+                        <i class="icono">🚪</i>
+                        <span>Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>Gestión de Productos</h1>
+                <div class="user-info">
+                    <span>Administrador</span>
+                </div>
+            </div>
+
+            <div id="vista-productos" class="vista vista-activa">
+                <div class="vista-header">
+                    <h2>Gestión de Productos</h2>
+                    <button id="btn-nuevo-producto" class="btn-primario">+ Nuevo Producto</button>
+                </div>
+                
+                <div class="filtros">
+                    <input type="text" placeholder="Buscar producto..." id="buscar-producto">
+                    <select id="filtro-categoria">
+                        <option value="">Todas las categorías</option>
+                        <option value="torta">Tortas</option>
+                        <option value="pie">Pie</option>
+                        <option value="masa">Masas</option>
+                    </select>
+                </div>
+                
+                <div id="lista-productos">
+                    <!-- Los productos se cargarán aquí con JavaScript -->
+                </div>
+            </div>
+
+            <!-- Modal para formularios (se muestra dinámicamente) -->
+            <div id="modal-formulario" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar-modal">&times;</span>
+                    <div id="contenido-modal"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+</html>

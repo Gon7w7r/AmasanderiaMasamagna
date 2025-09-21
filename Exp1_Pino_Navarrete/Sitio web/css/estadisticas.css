@@ -1,0 +1,51 @@
+/* Estadísticas del dashboard */
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tarjeta-estadistica {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tarjeta-estadistica h3 {
+    margin-bottom: 10px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.tarjeta-estadistica .numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.actividad-reciente {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.actividad-reciente h3 {
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.actividad-reciente ul {
+    list-style-type: none;
+}
+
+.actividad-reciente li {
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.actividad-reciente li:last-child {
+    border-bottom: none;
+}
