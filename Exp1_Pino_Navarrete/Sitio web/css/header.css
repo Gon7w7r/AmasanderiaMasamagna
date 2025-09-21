@@ -184,3 +184,27 @@ footer{
 #resumen-lista button:hover {
   background-color: #2b9ee6;    /* Color al pasar el mouse */
 }
+
+
+#switch-admin a{
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: bold;
+  color: black;
+}
+
+#switch-admin a:hover{
+  
+  color: #2b9ee6;
+}
+
+
+#switch-admin{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  padding: 1px 1px;
+  width: 100%;     
+}

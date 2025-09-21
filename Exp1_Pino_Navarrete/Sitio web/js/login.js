@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Validación básica como pide el documento
         if (password.length >= 4 && password.length <= 10) {
             if (username === 'admin' && password === 'admin123') {
-                window.location.href = 'index.html';
+                window.location.href = 'admin_index.html';
             } else {
                 document.getElementById('errorMessage').style.display = 'block';
             }

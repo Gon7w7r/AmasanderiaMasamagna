@@ -305,3 +305,22 @@ body {
     border-radius: 8px;
     background-color: white;
 }
+
+
+#switch-login a{
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: bold;
+  color: black;
+}
+
+#switch-login a:hover{
+  color: #2b9ee6;
+}
+
+
+#switch-login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
