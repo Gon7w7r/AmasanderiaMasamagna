@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/formulario.css">
 </head>
 
 
@@ -21,50 +21,98 @@
     <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="productos.html">Productos</a></li>
-        <li><a href="#">Acerca</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
     </ul>
     </nav>
     </div>
 
-    <a href="#" class="carrito"><img src="img/shoppingcart.png" alt="Carrito Logo" class="logo"></a>
+    <div class="carrito-container">
+        <a href="#" id="btn-carrito">
+        <img src="img/shoppingcart.png" alt="Carrito Logo" class="logo">
+        </a>
 
+        <!-- Contenido oculto -->
+    <div id="carrito" class="carrito oculto">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total: $<span id="total">0</span></strong></p>
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        <a href="carrito.html">Ver carrito</a>
+    </div>
+    </div>
     </header>
-    <main>
-        <div id="form-registro">
+
+
+        <main>
+            <img src="img/logo.jpg" alt="Main Logo" class="imagen-centro">
+            <div id="form-registro">
             <h2>Registro</h2>
-            <form action="#" method="post">
+            <form id="registroForm" action="#" method="post">
+
+                <!-- Rut -->
+                <label for="rut">Rut:</label><br>
+                <input type="text" id="rut" name="rut" required><br><br>
+                
                 <!-- Nombre -->
-                <label for="nombre">Nombre completo:</label><br>
+                <label for="nombre">Nombres:</label><br>
                 <input type="text" id="nombre" name="nombre" required><br><br>
 
+                <!-- Apellido -->
+                <label for="apellido">Apellidos:</label><br>
+                <input type="text" id="apellido" name="apellido" required><br><br>
+                
+                <!-- Fecha nacimiento -->
+                <label for="fechaNacimiento">Fecha de Nacimiento(Opcional):</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br><br>
                 <!-- Correo -->
                 <label for="correo">Correo electrónico:</label><br>
                 <input type="email" id="correo" name="correo" required><br><br>
+                
+                <div class="region">
+                    <label for="region">Región:</label>
+                    <select id="region" required>
+                        <option value="">--Selecciona una región--</option>
+                    </select>
+                </div>
 
-                <!-- Direccion -->
-                <label for="direccion">Direccion:</label><br>
+                <div class="comuna">
+                    <label for="comuna">Comuna:</label>
+                    <select id="comuna" required>
+                        <option value="">--Selecciona una comuna--</option>
+                    </select>
+                </div>
+
+                
+
+                <!-- Dirección -->
+                <label for="direccion">Dirección:</label><br>
                 <input type="text" id="direccion" name="direccion" required><br><br>
+
+
 
                 <!-- Contraseña -->
                 <label for="clave">Contraseña:</label><br>
                 <input type="password" id="clave" name="clave" required><br><br>
 
-                <!-- Contraseña -->
-                <label for="clave">Repetir contraseña:</label><br>
-                <input type="password" id="clave" name="clave" required><br><br>
+                <!-- Repetir contraseña -->
+                <label for="clave2">Repetir contraseña:</label><br>
+                <input type="password" id="clave2" name="clave2" required><br><br>
 
                 <!-- Botón enviar -->
                 <div id="posicion">
-                    <button type="submit">Registrarse</button>
-                    <a href="login.html">Volver a inicio de sesion</a>
+                <button type="submit">Registrarse</button>
+                <a href="login.html">Volver a inicio de sesión</a>
                 </div>
+                
             </form>
-        </div> 
-    </main> 
+            <p id="mensajeError" style="color:red; font-weight:bold;"></p>
+            </div> 
+        </main> 
 
 
-    <footer>© 2025 Mi Sitio. Todos los derechos reservados.</footer>
+    <footer>©2025 Amasanderia Masamagna. Todos los derechos reservados.</footer>
+    <script src="js/validacionRegistro.js"></script>
+    <script src="js/carrito.js"></script>
     
 </body>
 </html>

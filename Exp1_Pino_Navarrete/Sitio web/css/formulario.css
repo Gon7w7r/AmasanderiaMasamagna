@@ -1,0 +1,96 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    flex-direction: column;
+    display: flex;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff
+}
+
+main {
+    flex: 1; /* ocupa el espacio disponible entre header y footer */
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    padding: 100px;
+    flex-direction: column;
+}
+
+#form-registro {
+    background: #2c2c3e;  /* un color de fondo para que resalte */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 400px; /* evita que se estire demasiado */
+}
+
+#posicion a{
+    text-decoration: none;/*elimina la linea subtitulo del link*/
+    color: #fff;/*color del texto*/
+    font-weight: bold;/*fuente del texto*/
+    transition: color 0.3s;/*tiempo de demora de aparicion del color entre que el cursor se pone sobre el texto*/
+}
+
+#posicion a:hover{
+    color: #4cafef;
+}
+#posicion{
+    display: flex;/*Convierte el header en un contenedor flexible*/
+    justify-content: space-between ;/*coloca un elemento a la izquierda y el otro a la derecha (con espacio entre ellos)*/
+    align-items: center;/*Centra verticalmente los elementos dentro del header.*/
+}
+
+.imagen-centro {
+    width: 150px;   /* ajusta el tamaño del logo */
+    height: auto;   /* mantiene proporciones */
+    margin-bottom: 20px; /* espacio entre imagen y formulario */
+}
+
+.caja-texto {
+    width: 100%;           /* ocupa todo el ancho del form */
+    max-width: 350px;      /* no más de 350px */
+    height: 150px;         /* alto más grande para escribir */
+    font-size: 16px;       /* tamaño de texto cómodo */
+    padding: 10px;         /* espacio interno */
+    border-radius: 6px;    /* bordes redondeados */
+    border: 1px solid #ccc;/* borde sutil */
+    resize: vertical;      /* permite al usuario agrandarlo hacia abajo */
+    color: #000;           /* texto en negro */
+}
+
+.contenedor-boton {
+    display: flex;
+    justify-content: flex-end; /* manda el botón a la derecha */
+}
+
+/* Contenedor de región y comuna */
+.region {
+    display: flex;
+    flex-direction: column; /* apila los elementos verticalmente */
+    gap: 10px;              /* espacio entre label y select */
+    width: 100%;            /* ocupa todo el ancho del formulario */
+}
+
+.region select {
+    width: 100%;            /* ocupa todo el ancho del formulario */
+    box-sizing: border-box; /* padding incluido en el ancho */
+    padding: 5px;          /* igual que los otros inputs */
+}
+
+.comuna {
+    display: flex;
+    flex-direction: column; /* apila los elementos verticalmente */
+    gap: 10px;              /* espacio entre label y select */
+    width: 100%;            /* ocupa todo el ancho del formulario */
+}
+
+.comuna select {
+    width: 100%;            /* ocupa todo el ancho del formulario */
+    box-sizing: border-box; /* padding incluido en el ancho */
+    padding: 5px;          /* igual que los otros inputs */
+}
+

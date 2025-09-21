@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <header>
+    <div class="izquierda">
+    <a href="index.html">
+        <img src="img/logo.jpg" alt="Main Logo" class="logo">
+    </a>
+    <nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    </nav>
+    </div>
+
+    <div class="carrito-container">
+        <a href="#" id="btn-carrito">
+        <img src="img/shoppingcart.png" alt="Carrito Logo" class="logo">
+        </a>
+
+        <!-- Contenido oculto -->
+    <div id="carrito" class="carrito oculto">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total: $<span id="total">0</span></strong></p>
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        <a href="carrito.html">Ver carrito</a>
+    </div>
+    </div>
+    </header>
+
+
+
+
+    <main id="main-carrito">
+        <div id="contenedor-carrito">
+            <h2>Resumen de tu Pedido</h2>
+            <div id="resumen-carrito" class="resumen-carrito">
+                <h3>Resumen del Pedido</h3>
+                <ul id="resumen-lista"></ul>
+                <div id="abajo-derecha">
+                    <p><strong>Total: $<span id="total-resumen">0</span></strong></p>
+                    <button onclick="irAPagar()">Proceder al pago</button>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    
+    <footer>© 2025 Amasanderia Masamagna. Todos los derechos reservados.</footer>
+
+    <script src="js/carrito.js"></script>
+</body>
+</html>

@@ -4,8 +4,7 @@
 main {
     flex: 1; 
     margin-top: 90px;
-    padding: 20px;
-    
+    padding: 20px;  
 }
 
 
@@ -76,12 +75,14 @@ main {
 
 #registro{
     display: flex;
-    justify-content: flex-end;   /* manda todo a la derecha */
+    justify-content: flex-end;
     align-items: center;
-    gap: 5px;                   /* espacio entre enlaces y la barra | */
-    margin-bottom: 5px;         /* espacio debajo, antes del artículo */
+    gap: 5px;
+    margin-bottom: 5px;
     padding: 1px 1px;
+    width: 100%;       /* ocupar todo el ancho disponible */
 }
+
 
 #registro a {
     text-decoration: none;
@@ -91,7 +92,7 @@ main {
 }
 
 #registro a:hover {
-    color: #2a2a3d; /* efecto hover */
+    color: #6c6ccc; /* efecto hover */
 }
 
 #registro h1 {
@@ -99,4 +100,17 @@ main {
     font-weight: bold;
 }
 
+#titulo-productos{
+    font-weight: bold;
+    color: #050505;
+    text-align: center; /* centra el texto dentro de su contenedor */
+}
+    
+#productos2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 20px; /* espacio entre productos */
+    margin-top: 40px;
+    padding: 20px;
+}
 

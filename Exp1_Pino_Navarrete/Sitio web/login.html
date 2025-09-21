@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/formulario.css">
 </head>
 <body>
     <header>
@@ -18,20 +18,33 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="productos.html">Productos</a></li>
-                    <li><a href="#">Acerca</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
 
-    <a href="#" class="carrito"><img src="img/shoppingcart.png" alt="Carrito Logo" class="logo"></a>
+    <div class="carrito-container">
+    <a href="#" id="btn-carrito">
+      <img src="img/shoppingcart.png" alt="Carrito Logo" class="logo">
+    </a>
+
+    <!-- Contenido oculto -->
+    <div id="carrito" class="carrito oculto">
+      <h2>Carrito</h2>
+      <ul id="lista-carrito"></ul>
+      <p><strong>Total: $<span id="total">0</span></strong></p>
+      <button onclick="vaciarCarrito()">Vaciar carrito</button>
+      <a href="carrito.html">Ver carrito</a>
+    </div>
+  </div>
 
     </header>
 
     <main>
+        <img src="img/logo.jpg" alt="Main Logo" class="imagen-centro">
         <div id="form-registro">
             <h2>Iniciar sesion</h2>
-            <form action="#" method="post">
+            <form id="loginForm" action="#" method="post">
                 <!-- Correo -->
                 <label for="correo">Correo electrónico:</label><br>
                 <input type="email" id="correo" name="correo" required><br><br>
@@ -46,10 +59,14 @@
                     <a href="registro.html">Registrarse</a>
                 </div>
             </form>
+            <p id="mensajeError" style="color:red; font-weight:bold;"></p>
         </div> 
+        
     </main> 
 
-    <footer>© 2025 Mi Sitio. Todos los derechos reservados.</footer>
+    <footer>© 2025 Amasanderia Masamagna. Todos los derechos reservados.</footer>
+    <script src="js/validacionLogin.js"></script>
+    <script src="js/carrito.js"></script>
     
 </body>
 </html>

@@ -1,5 +1,5 @@
 * {
-    margin: 0x;/*margen entre el borde de la pagina y la caja de texto*/
+    margin: 0;/*margen entre el borde de la pagina y la caja de texto*/
     padding: 0px;
     box-sizing: border-box;
 }
@@ -15,6 +15,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #fff
+    
+    
 }
 
 header {
@@ -76,4 +78,109 @@ footer{
     padding: 15px 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
+}
+
+.carrito {
+  position: absolute;
+  top: 100px; /* un poco más abajo del icono */
+  right: 0;
+  background: #1e1e2f; /* mismo color que el header */
+  color: #fff;
+  border: 1px solid #444;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.carrito h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.carrito ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carrito ul li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.carrito button {
+  background: #4cafef;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.carrito a{
+  color: white;
+  text-decoration: none;
+}
+.carrito a:hover{
+  color: #3799d4;
+}
+
+.carrito button:hover {
+  background: #3799d4;
+}
+.oculto {
+  display: none;
+}
+
+
+
+
+#contenedor-carrito {
+  background: #1e1e2f; /* mismo color que el header */
+  color: #fff;
+  border: 1px solid #444;
+  padding: 15px;
+  height: auto;
+  width: 500px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+
+#main-carrito{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  padding: 20px;
+  
+}
+
+
+#abajo-derecha {  
+  bottom: 0px;           
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#resumen-lista button {
+  background-color: #1c434f;   /* Color de fondo */
+  color: white;                 /* Texto blanco */
+  border: none;                 /* Sin borde */
+  border-radius: 5px;           /* Bordes redondeados */
+  width: 20px;                  /* Ancho */
+  height: 20px;                 /* Alto */
+  font-size: 18px;              /* Tamaño del texto */
+  cursor: pointer;              /* Cursor al pasar el mouse */
+  transition: background 0.2s;  /* Transición suave al hover */
+}
+
+#resumen-lista button:hover {
+  background-color: #2b9ee6;    /* Color al pasar el mouse */
 }

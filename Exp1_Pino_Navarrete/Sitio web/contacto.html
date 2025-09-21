@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <header>
+        <div class="izquierda">
+            <a href="index.html">
+            <img src="img/logo.jpg" alt="Main Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="carrito-container">
+            <a href="#" id="btn-carrito">
+            <img src="img/shoppingcart.png" alt="Carrito Logo" class="logo">
+            </a>
+
+        <!-- Contenido oculto -->
+        <div id="carrito" class="carrito oculto">
+            <h2>Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <p><strong>Total: $<span id="total">0</span></strong></p>
+            <button onclick="vaciarCarrito()">Vaciar carrito</button>
+            <a href="carrito.html">Ver carrito</a>
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <div id="registro">
+            <a href="login.html">Iniciar sesion</a>
+            <h1>|</h1>
+            <a href="registro.html">Registrarse</a>
+        </div>
+        
+        <img src="img/logo.jpg" alt="Main Logo" class="imagen-centro">
+        <div id="form-registro">
+            <h2>Contactanos</h2>
+            <form id="contactoForm" action="#" method="post">
+
+                <label for="nombre">Nombre completo:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <!-- Correo -->
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" required><br><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" class="caja-texto" required ></textarea>
+
+                <!-- Botón enviar -->
+                <div class="contenedor-boton">
+                    <button type="submit" id="enviar-contacto">Enviar</button>
+                </div>
+                
+            </form>
+            <p id="mensajeError" style="color:red; font-weight:bold;"></p>
+        </div>
+    </main>
+
+
+    <footer>© 2025 Amasanderia Masamagna. Todos los derechos reservados.</footer>
+    <script src="js/carrito.js"></script>
+    <script src="js/validacionContacto.js"> </script>
+    
+</body>
+</html>
