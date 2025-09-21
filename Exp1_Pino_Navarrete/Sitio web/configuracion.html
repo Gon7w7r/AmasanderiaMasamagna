@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración del Sistema</title>
+    <link rel="stylesheet" href="css/admin_header.css">
+    <link rel="stylesheet" href="css/botones.css">
+</head>
+<body>
+    <div class="admin-contenedor">
+        <div class="barra">
+            <div class="admin-logo">
+                <h2>Panel de Administración</h2>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="admin_index.html">
+                        <i class="icono">🏠</i>
+                        <span>Panel Principal</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin_productos.html">
+                        <i class="icono">📦</i>
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="usuarios.html">
+                        <i class="icono">👥</i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pedidos.html">
+                        <i class="icono">📋</i>
+                        <span>Pedidos</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="configuracion.html">
+                        <i class="icono">⚙️</i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin_login.html">
+                        <i class="icono">🚪</i>
+                        <span>Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>Configuración del Sistema</h1>
+                <div class="user-info">
+                    <span>Administrador</span>
+                </div>
+            </div>
+
+            <div id="vista-configuracion" class="vista vista-activa">
+                <h2>Configuración del Sistema</h2>
+                <div class="configuracion-opciones">
+                    <div class="opcion-configuracion">
+                        <h3>Información de la Tienda</h3>
+                        <form id="form-info-tienda">
+                            <label for="nombre-tienda">Nombre de la Tienda:</label>
+                            <input type="text" id="nombre-tienda" name="nombre-tienda" required maxlength="100">
+                            
+                            <label for="email-tienda">Email de Contacto:</label>
+                            <input type="email" id="email-tienda" name="email-tienda" required maxlength="100">
+                            
+                            <label for="telefono-tienda">Teléfono:</label>
+                            <input type="tel" id="telefono-tienda" name="telefono-tienda" required>
+                            
+                            <button type="submit" class="btn-primario">Guardar Cambios</button>
+                        </form>
+                    </div>
+                    
+                    <div class="opcion-configuracion">
+                        <h3>Configuración de Envíos</h3>
+                        <form id="form-envios">
+                            <label for="costo-envio">Costo de Envío:</label>
+                            <input type="number" id="costo-envio" name="costo-envio" min="0" step="0.01">
+                            
+                            <label for="dias-entrega">Días de Entrega Estimados:</label>
+                            <input type="number" id="dias-entrega" name="dias-entrega" min="1">
+                            
+                            <button type="submit" class="btn-primario">Guardar Configuración</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/configuracion.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="css/admin_header.css">
+    <link rel="stylesheet" href="css/botones.css">
+    <link rel="stylesheet" href="css/estadisticas.css">
+</head>
+<body>
+    <div class="admin-contenedor">
+        <div class="barra">
+            <div class="admin-logo">
+                <h2>Panel de Administración</h2>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="admin_index.html">
+                        <i class="icono">🏠</i>
+                        <span>Panel Principal</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin_productos.html">
+                        <i class="icono">📦</i>
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="usuarios.html">
+                        <i class="icono">👥</i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pedidos.html">
+                        <i class="icono">📋</i>
+                        <span>Pedidos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="configuracion.html">
+                        <i class="icono">⚙️</i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin_login.html">
+                        <i class="icono">🚪</i>
+                        <span>Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>¡Hola, Administrador!</h1>
+                <div class="user-info">
+                    <span>Administrador</span>
+                </div>
+            </div>
+
+            <div id="vista-dashboard" class="vista vista-activa">
+                <h2>Panel Principal</h2>
+                <div class="estadisticas">
+                    <div class="tarjeta-estadistica">
+                        <h3>Total de Productos</h3>
+                        <p class="numero"></p>
+                    </div>
+                    <div class="tarjeta-estadistica">
+                        <h3>Total de Usuarios</h3>
+                        <p class="numero"></p>
+                    </div>
+                    <div class="tarjeta-estadistica">
+                        <h3>Pedidos del Mes</h3>
+                        <p class="numero"></p>
+                    </div>
+                    <div class="tarjeta-estadistica">
+                        <h3>Ingresos</h3>
+                        <p class="numero"></p>
+                    </div>
+                </div>
+                
+                <div class="actividad-reciente">
+                    <h3>Actividad Reciente</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/datos.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

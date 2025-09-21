@@ -1,0 +1,182 @@
+/* Estilos para botones */
+.btn-primario {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-primario:hover {
+    background-color: #2980b9;
+}
+
+.btn-secundario {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-editar {
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #e67e22;
+}
+
+.btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos para botones de acciones */
+.acciones {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-secundario {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-peligro {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secundario:hover {
+    background-color: #5a6268;
+}
+
+.btn-peligro:hover {
+    background-color: #c82333;
+}
+
+.usuario-item, .producto-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* css/modales.css - Corregido */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+    background: white;
+    position: absolute; /* Cambiamos a absolute */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste fino del centrado */
+    padding: 25px;
+    border-radius: 10px;
+    width: 85%;
+    max-width: 450px;
+    max-height: 80vh; /* Límite de altura */
+    overflow-y: auto; /* Scroll si es necesario */
+}
+
+.cerrar-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.cerrar-modal:hover {
+    color: #000;
+}
+
+/* Formularios */
+#contenido-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contenido-modal label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#contenido-modal input,
+#contenido-modal select,
+#contenido-modal textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contenido-modal textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+#contenido-modal button[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#contenido-modal button[type="submit"]:hover {
+    background: #45a049;
+}

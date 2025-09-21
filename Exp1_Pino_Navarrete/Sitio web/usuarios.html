@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="css/admin_header.css">
+    <link rel="stylesheet" href="css/botones.css">
+</head>
+<body>
+    <div class="admin-contenedor">
+        <div class="barra">
+            <div class="admin-logo">
+                <h2>Panel de Administración</h2>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="admin_index.html">
+                        <i class="icono">🏠</i>
+                        <span>Panel Principal</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin_productos.html">
+                        <i class="icono">📦</i>
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="usuarios.html">
+                        <i class="icono">👥</i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pedidos.html">
+                        <i class="icono">📋</i>
+                        <span>Pedidos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="configuracion.html">
+                        <i class="icono">⚙️</i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin_login.html">
+                        <i class="icono">🚪</i>
+                        <span>Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>Gestión de Usuarios</h1>
+                <div class="user-info">
+                    <span>Administrador</span>
+                </div>
+            </div>
+
+            <div id="vista-usuarios" class="vista vista-activa">
+                <div class="vista-header">
+                    <h2>Gestión de Usuarios</h2>
+                    <button id="btn-nuevo-usuario" class="btn-primario">+ Nuevo Usuario</button>
+                </div>
+                
+                <div class="filtros">
+                    <input type="text" placeholder="Buscar usuario..." id="buscar-usuario">
+                    <select id="filtro-rol">
+                        <option value="">Todos los roles</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="vendedor">Vendedor</option>
+                        <option value="cliente">Cliente</option>
+                    </select>
+                </div>
+                
+                <div id="lista-usuarios">
+                    <!-- Los usuarios se cargarán aquí con JavaScript -->
+                </div>
+            </div>
+
+            <!-- Modal para formularios (se muestra dinámicamente) -->
+            <div id="modal-formulario" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar-modal">&times;</span>
+                    <div id="contenido-modal"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/usuarios.js"></script>
+</body>
+</html>
