@@ -111,19 +111,27 @@ function mostrarFormularioUsuario(usuarioEditar) {
 function guardarUsuario(esEdicion) {
     const usuarios = obtenerDatos('usuarios');
     const usuarioId = document.getElementById('usuario-id').value;
-    
+
+    // ✅ Validación personalizada del correo
+    const correo = document.getElementById('correo').value;
+    const regexCorreo = /^[a-zA-Z0-9._%+-]+@(duoc.cl|gmail.com|profesorduoc.cl)$/;
+
+    if (!regexCorreo.test(correo)) {
+        alert("El correo debe terminar en @duoc.cl, @gmail.com o @profesorduoc.cl");
+        return; // ❌ No sigue si el correo no es válido
+    }
+
     const usuarioData = {
         run: document.getElementById('run').value,
         nombre: document.getElementById('nombre').value,
         apellidos: document.getElementById('apellidos').value,
-        correo: document.getElementById('correo').value,
+        correo: correo,
         fechaNacimiento: document.getElementById('fechaNacimiento').value,
         tipoUsuario: document.getElementById('tipoUsuario').value,
         region: document.getElementById('region').value,
         comuna: document.getElementById('comuna').value,
         direccion: document.getElementById('direccion').value
     };
-    
     if (esEdicion) {
         const index = usuarios.findIndex(u => u.id === parseInt(usuarioId));
         if (index !== -1) {
@@ -133,7 +141,6 @@ function guardarUsuario(esEdicion) {
         usuarioData.id = usuarios.length > 0 ? Math.max(...usuarios.map(u => u.id)) + 1 : 1;
         usuarios.push(usuarioData);
     }
-    
     guardarDatos('usuarios', usuarios);
     cerrarModal();
     cargarUsuarios();
