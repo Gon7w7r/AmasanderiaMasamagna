@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AmasanderiaApplication<amasanderia>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sitio.amasanderia.AmasanderiaApplication",
+            "projectName": "amasanderia",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
