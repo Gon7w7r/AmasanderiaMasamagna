@@ -3,6 +3,22 @@ En esta version del proyecto se abarcan las funciones de agregar items al carrit
 simular compras y eliminar usuarios y productos.
 
 
+Vitest como test runner principal
+React Testing Library para el testing de componentes React
+
+npm install -D vitest @vitest/ui
+npm install -D @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom
+npm install -D jest @testing-library/jest-dom
+
+En package.json, agregar lo siguiente en scripts:
+"test": "vitest --environment jsdom",
+    "test:ui": "vitest --ui"
+En vite.config.js, agregar lo siguiente en export default defineConfigure:
+ test: {
+    globals: true,
+    environment: 'jsdom',
+  }
+
 Tecnologias implementadas
 Frontend: React con componentes para Productos, Contacto, Login, Carrito.
 Backend: Spring Boot con API REST (Producto, Usuario, Carrito, ItemCarrito).
